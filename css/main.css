@@ -4,21 +4,21 @@ Author: Avery Seabolt
 */
 
 /* ------------------------------------------------------------------------ */
-/* Variables */ 
+/* Variables */
 /* ------------------------------------------------------------------------ */
 
 :root {
-    --primary-color: #fff;
+  --primary-color: #4621FF;
 }
 
 /* ------------------------------------------------------------------------ */
-/* Imports */ 
+/* Imports */
 /* ------------------------------------------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 
 /* ------------------------------------------------------------------------ */
-/* Basic Setup */ 
+/* Basic Setup */
 /* ------------------------------------------------------------------------ */
 
 * {
@@ -27,23 +27,25 @@ Author: Avery Seabolt
   padding: 0;
 }
 
-html, body {
+html,
+body {
   background-color: #fff;
   color: #222;
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   padding: 0;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  /* background-color: #f6f6f6; */
 }
 
-section {
+/* section {
   padding: 105px 0px;
-}
+} */
 
 /* ------------------------------------------------------------------------ */
-/* Reusable */ 
+/* Reusable */
 /* ------------------------------------------------------------------------ */
 
 .row {
@@ -66,50 +68,159 @@ section {
 }
 
 /* ------------------------------------------------------------------------ */
-/* Navigation */ 
+/* Navigation */
 /* ------------------------------------------------------------------------ */
 
 .main-nav {
-    background-color: #111;
-    padding: 30px 10px;
-    justify-content: center;
+  height: 140px;
 }
 
 .main-nav ul {
-    width: 70%;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
 }
 
 .main-nav ul li {
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
+  display: inline-block;
 }
 
 .main-nav ul li a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav ul li:last-child a {
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 8px;
+  transition: border-color 0.1s, background-color 0.1s, color 0.1s;
+}
+
+.main-nav ul li:last-child a:hover,
+.main-nav ul li:last-child a:active {
+  border-color: #4621FF;
+  background-color: #4621FF;
+  color: #fff;
+}
+
+.nav-title-container {
+  width: 50%;
+}
+
+.nav-link-container {
+  width: 50%;
+  justify-content: flex-end;
 }
 
 .nav-link {
-    font-size: 70%;
-    letter-spacing: 4px;
+  font-size: 65%;
+  color: #666;
+  font-weight: 600;
+  margin-left: 40px;
 }
 
 .nav-title {
-    line-height: 27px;
-    border: 2px solid #fff;
-    padding: 4px 13px;
-    width: 180px;
+  line-height: 27px;
 }
 
 /* ------------------------------------------------------------------------ */
-/* Headings */ 
+/* Headings */
 /* ------------------------------------------------------------------------ */
 
 h1 {
-    font-weight: inherit;
-    font-size: 70%;
-    letter-spacing: 6px;
+  font-weight: 700;
+  font-size: 85%;
+  letter-spacing: 3px;
+  color: #333;
+  padding: 29px 15px 29px 10px;
+  border-bottom: 3px solid #4621FF;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Landing Page */
+/* ------------------------------------------------------------------------ */
+
+.cta-flex-container {
+  /* position: relative;
+  bottom: 0; */
+}
+
+.cta-text-container {
+  flex-direction: column;
+  /* align-items: center; */
+
+  /* ??? */
+  margin-top: 110px;
+  /* ??? */
+}
+
+.cta-text-container h3 {
+  font-weight: 800;
+  color: #444;
+  font-size: 32px;
+}
+
+.cta-text-container p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  width: 450px;
+  line-height: 145%;
+  margin: 20px 0 20px 0;
+}
+
+.btn-cta a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4621FF;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 40px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------------------------------ */
+
+/* .footer-inner-container {} */
+
+.sm-links-container {
+  width: 50%;
+}
+
+.email-container {
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.sm-links-container ul {
+  position: fixed;
+  bottom: 32px;
+}
+
+.sm-links-container ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.sm-links-container ul li a {
+  color: #333;
+}
+
+.sm-links-container ul li a ion-icon {
+  font-size: 24px;
+}
+
+.email-container p {
+  position: fixed;
+  bottom: 40px;
+  font-weight: 600;
+  font-size: 80%;
+  color: #666;
 }
